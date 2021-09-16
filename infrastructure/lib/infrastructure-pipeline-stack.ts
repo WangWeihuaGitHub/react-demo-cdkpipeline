@@ -26,6 +26,7 @@ export class InfrastructurePipelineStack extends Stack {
   	        'npm run build',
 	        'npx cdk synth'
       	 ],
+         primaryOutputDirectory: 'infrastructure/cdk.out',
        }),
     });
 
