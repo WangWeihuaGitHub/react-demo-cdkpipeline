@@ -23,7 +23,7 @@ export class InfrastructurePipelineStack extends Stack {
          commands: [
             'cd infrastructure',
             'npm ci',
-  	        'npm run build',
+  	        
 	        'npx cdk synth'
       	 ],
          primaryOutputDirectory: 'infrastructure/cdk.out',
