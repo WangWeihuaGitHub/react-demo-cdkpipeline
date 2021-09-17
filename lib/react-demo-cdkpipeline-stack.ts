@@ -18,7 +18,7 @@ export class ReactDemoCdkpipelineStack extends Stack {
        // How it will be built and synthesized
        synth: new ShellStep('Synth', {
          // Where the source can be found
-         input: CodePipelineSource.gitHub('WangWeihuaGitHub/demo-react-cdkpipeline', 'main'),
+         input: CodePipelineSource.gitHub('WangWeihuaGitHub/react-demo-cdkpipeline', 'main'),
          
          // Install dependencies, build and run cdk synth
          commands: [

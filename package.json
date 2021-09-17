@@ -8,8 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk",
-    "preinstall": "npm install semver && node bin/check-node-version"
+    "cdk": "cdk"
   },
   "devDependencies": {
     "@aws-cdk/assert": "^1.123.0",
