@@ -2,6 +2,7 @@ import * as cdk from "@aws-cdk/core";
 import * as s3 from "@aws-cdk/aws-s3";
 import * as s3deploy from "@aws-cdk/aws-s3-deployment";
 import * as cloudFront from "@aws-cdk/aws-cloudfront";
+import * as path from 'path';
 
 export class ReactDemoStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -55,7 +56,7 @@ export class ReactDemoStack extends cdk.Stack {
 
     // Setup Bucket Deployment to automatically deploy new assets and invalidate cache
     new s3deploy.BucketDeployment(this, `reactdemoapp-s3bucketdeployment`, {
-      sources: [s3deploy.Source.asset("../react-demo/build")],
+      sources: [s3deploy.Source.asset(path.resolve(__dirname, '../react-demo/build'))],
       destinationBucket: s3Site,
       distribution: distribution,
       distributionPaths: ["/*"]
