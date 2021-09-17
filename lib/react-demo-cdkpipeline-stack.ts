@@ -22,10 +22,12 @@ export class ReactDemoCdkpipelineStack extends Stack {
          
          // Install dependencies, build and run cdk synth
          commands: [
+          'cd demo-react-cdkpipeline',
             'npm ci',
   	        'npm run build',
 	        'npx cdk synth'
       	 ],
+         primaryOutputDirectory: 'demo-react-cdkpipeline/cdk.out',
        }),
     });
 
