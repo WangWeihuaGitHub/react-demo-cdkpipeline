@@ -25,6 +25,7 @@ export class ReactDemoCdkpipelineStack extends Stack {
          // 'cd demo-react-cdkpipeline',
             'npm ci',
             'cd react-demo',
+            'npm ci',
   	        'npm run build',
             'cd ..',
 	        'npx cdk synth'
