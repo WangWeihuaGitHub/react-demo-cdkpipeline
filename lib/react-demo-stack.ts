@@ -55,7 +55,7 @@ export class ReactDemoStack extends cdk.Stack {
 
     // Setup Bucket Deployment to automatically deploy new assets and invalidate cache
     new s3deploy.BucketDeployment(this, `reactdemoapp-s3bucketdeployment`, {
-      sources: [s3deploy.Source.asset("./react-demo/build")],
+      sources: [s3deploy.Source.asset("/react-demo/build")],
       destinationBucket: s3Site,
       distribution: distribution,
       distributionPaths: ["/*"]
